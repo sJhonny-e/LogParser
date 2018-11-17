@@ -1,16 +1,6 @@
 require 'spec_helper'
 
 RSpec.describe LogLine do
-    class TestVisitor
-        attr_reader :pages
-        def initialize
-            @pages = []
-        end
-
-        def visit(log_line)
-            @pages << log_line.page_url
-        end
-    end
 
     it 'accepts visitors' do
         visitor = TestVisitor.new
