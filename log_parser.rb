@@ -11,6 +11,7 @@ def create_log_lines_store(log_file_name)
 end
 
 def print_stats(visitor, description)
+    puts "-----Total #{description}-----"
     visitor.stats.sort_by(&:last).reverse.each do |url, num|
         puts "#{url} #{num} #{description}"
     end
