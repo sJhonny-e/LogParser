@@ -5,5 +5,7 @@ class LogLine
         @visitor_ip = visitor_ip
     end
 
-    
+    def accept(visitor)
+        visitor.visit(self)
+    end
 end
