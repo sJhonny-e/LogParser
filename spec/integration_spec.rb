@@ -11,9 +11,9 @@ RSpec.describe 'Stats for a test log file' do
         expect(stats_for_file).to include total_visits_stats
     end
     
-    xit 'contains an ordered list of pages by unique views' do
+    it 'contains an ordered list of pages by unique views' do
         unique_views_stats = <<-STATS
-/page_2 2 uinque views
+/page_2 2 unique views
 /page_1 1 unique views
         STATS
         expect(stats_for_file).to include unique_views_stats

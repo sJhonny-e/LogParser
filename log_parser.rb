@@ -21,3 +21,7 @@ store.visit_all([totals_visitor, uniques_visitor])
 totals_visitor.stats.sort_by(&:last).reverse.each do |url, num|
     puts "#{url} #{num} visits"
 end
+
+uniques_visitor.stats.sort_by(&:last).reverse.each do |url, num|
+    puts "#{url} #{num} unique views"
+end
