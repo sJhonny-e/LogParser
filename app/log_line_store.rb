@@ -7,8 +7,10 @@ class LogLineStore
         lines << log_line
     end
 
-    def visit_all(visitor)
-        lines.each { |l| l.accept(visitor) }
+    def visit_all(visitors)
+        lines.each do |l|
+            visitors.each { |visitor| l.accept(visitor) }
+        end
     end
 
     private
