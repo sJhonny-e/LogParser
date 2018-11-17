@@ -17,3 +17,7 @@ parser.log_lines.each { |l| store.store_log_line(l) }
 totals_visitor = TotalPageVisitsVisitor.new
 uniques_visitor = UniqueViewsVisitor.new
 store.visit_all([totals_visitor, uniques_visitor])
+
+totals_visitor.stats.sort_by(&:last).reverse.each do |url, num|
+    puts "#{url} #{num} visits"
+end
