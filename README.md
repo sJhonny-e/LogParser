@@ -40,3 +40,4 @@ Alternative solutions considered were:
 
 1. Error handling - make the parsing of the file more robust; ability to handle bad line formats
 2. Move orchestration, currently in the main script file, to a more testable location
+3. Don't read whole file at once; use something like `File.read_line` to make it more scalable for larger file sizes
